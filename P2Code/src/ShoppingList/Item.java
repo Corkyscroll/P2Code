@@ -1,4 +1,4 @@
-package p2Item;
+package ShoppingList;
 
 public class Item {
 	//Instance variables
