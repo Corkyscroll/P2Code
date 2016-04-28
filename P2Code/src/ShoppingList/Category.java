@@ -1,11 +1,14 @@
 package ShoppingList;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
     
-public class Category
+public class Category 
 {
     // Attributes
     private ArrayList<String> categories = new ArrayList<String>();
+    File file = new File("categories.txt");
     
     // Getters and Setters
     public ArrayList<String> getCategories()
@@ -13,33 +16,51 @@ public class Category
         return categories;
     }
     
-    public void setCategories()
+    public void setCategories(String item) throws FileNotFoundException
     {
-        categories.add("Sjov/Fun");
-        categories.add("Fødevare/Food");
-        categories.add("Nødvendige Andet Køb/Necessary Other Buys");
-        categories.add("Faste Udgifter/Known Expenses");
-        categories.add("Impulskøb/Impulse Buys");
+        checkList();
+        categories.add(item);
     }
     
     // the constructor
-    public Category(String item)
+    public Category(ArrayList<String> returner) throws FileNotFoundException
     {
-        categories.add(item);
+        checkList();
+        returner = categories;
+        saveList();
     }
-    public Category()
-    {
-        categories.add("Sjov/Fun");
-        categories.add("Fødevare/Food");
-        categories.add("Nødvendige Andet Køb/Necessary Other Buys");
-        categories.add("Faste Udgifter/Known Expenses");
-        categories.add("Impulskøb/Impulse Buys");
-        Save catname = new Save(categories);
-    }
-        
-    // save array object/array to file
-//    kartoffel categorysave = new kartoffel(categories);
     
+    public Category(String givenString) throws FileNotFoundException
+    {
+        setCategories(givenString);
+        saveList();
+    }
+    
+    public Category () throws FileNotFoundException
+    {
+        checkList();
+        saveList();
+    }
+    
+    public void checkList() throws FileNotFoundException {
+        try {
+        new Load(file, categories);
+        if (categories.isEmpty() == true)
+        {
+            categories.add("Nødvendigt/Necessary");
+            categories.add("Unødvendigt/Unnecessary");
+            categories.add("Planlagt/Planned");
+            categories.add("Uplanlagt/Unplanned");
+            saveList();
+        }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void saveList() {
+        new Save(categories, file);
+    }    
         
     // load/read the saved object/array from file
     //Load categoryload = new Load(categories);

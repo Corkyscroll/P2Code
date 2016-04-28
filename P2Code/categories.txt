@@ -1,0 +1,4 @@
+Nødvendigt/Necessary
+Unødvendigt/Unnecessary
+Planlagt/Planned
+Uplanlagt/Unplanned

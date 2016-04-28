@@ -5,25 +5,20 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Load
 {    
-    public Load(File test1) throws FileNotFoundException
+    public Load(File file, ArrayList<String> loadedFile) throws FileNotFoundException
     {
-            FileReader fileReader = new FileReader("test1.txt");
+            FileReader fileReader = new FileReader(file);
             BufferedReader br = new BufferedReader(fileReader);
-            ArrayList<String> loadedFile = new ArrayList<String>();
             String s;
-            
             
             try {
                 while((s = br.readLine()) != null)
                     loadedFile.add(s);
                 
-                System.out.println(loadedFile);
                 fileReader.close();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
@@ -32,7 +27,7 @@ public class Load
                 }
     }
     
-    public Load()
+    public Load() throws FileNotFoundException
     {
         System.out.println("No file loaded");
     }
