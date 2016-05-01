@@ -1,5 +1,7 @@
 package ShoppingList;
 
+import java.awt.Color;
+
 import javax.swing.*;
 
 @SuppressWarnings("serial")
@@ -36,7 +38,9 @@ public class Overview extends JFrame {
         
         //Set up the layout of the components
         GroupLayout layout = new GroupLayout(getContentPane());
+        Color rbgcolor = new Color(25,125,175);
         getContentPane().setLayout(layout);
+        getContentPane().setBackground(rbgcolor);
         layout.setAutoCreateContainerGaps(true);
         layout.setAutoCreateGaps(true);
         firstProgressBar.setStringPainted(true);

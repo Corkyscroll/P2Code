@@ -9,6 +9,7 @@ public class Item {
     //Instance variables
     private ArrayList<String> itemList = new ArrayList<String>();
     private ArrayList<String> categoryList = new ArrayList<String>();
+    private ArrayList<String> shortList = new ArrayList<String>();
     private String itemName;
     private String category;
     private Double price;
@@ -44,10 +45,16 @@ public class Item {
         saveItemList();
     }
     
-    public Item(String itemName) {
+    public Item(String itemName, String category, Double price) {
         setItemName(itemName);
+        setCategory(category);
+        setPrice(price);
         
-        saveItemList();
+        shortList.add(itemName);
+        shortList.add(category);
+        shortList.add(price.toString());
+        
+        saveItem();
     }
     
     //Getters and setters
@@ -115,5 +122,9 @@ public class Item {
     
     public void saveItemList() {
         new Save(itemList, itemFile);
+    }
+    
+    public void saveItem() {
+        new Save(shortList, itemFile);
     }
 }
