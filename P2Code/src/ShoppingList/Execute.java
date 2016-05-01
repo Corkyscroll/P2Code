@@ -58,7 +58,7 @@ public class Execute extends JFrame implements ActionListener {
         //Grid {0,0}
         myConstraints.fill = GridBagConstraints.BOTH;
         myConstraints.weightx = 0.5;
-        myConstraints.ipady = 10;
+        myConstraints.ipady = 0;
         myConstraints.anchor = GridBagConstraints.NORTHWEST;
         myConstraints.gridx = 0;
         myConstraints.gridy = 0;
@@ -69,19 +69,14 @@ public class Execute extends JFrame implements ActionListener {
         myConstraints.weightx = 0.5;
         myConstraints.gridx = 1;
         myConstraints.gridy = 0;
-        
-      //Grid {2,0}
-        myConstraints.fill = GridBagConstraints.BOTH;
-        myConstraints.weightx = 0.5;
-        myConstraints.gridx = 2;
-        myConstraints.gridy = 0;
+        centerPanel.add(overviewBTN, myConstraints);
         
       //Grid {0,1}
         myConstraints.fill = GridBagConstraints.BOTH;
         myConstraints.weightx = 0.5;
         myConstraints.gridx = 0;
         myConstraints.gridy = 1;
-        centerPanel.add(overviewBTN, myConstraints);
+        centerPanel.add(xpenseBTN, myConstraints);
         
       //Grid {1,1}
         myConstraints.fill = GridBagConstraints.BOTH;
@@ -89,32 +84,7 @@ public class Execute extends JFrame implements ActionListener {
         myConstraints.ipady = 0;
         myConstraints.gridx = 1;
         myConstraints.gridy = 1;
-        centerPanel.add(xpenseBTN, myConstraints);
-        
-      //Grid {2,1}
-        myConstraints.fill = GridBagConstraints.BOTH;
-        myConstraints.weightx = 0.5;
-        myConstraints.gridx = 2;
-        myConstraints.gridy = 1;
-        
-      //Grid {0,2}
-        myConstraints.fill = GridBagConstraints.BOTH;
-        myConstraints.weightx = 0.5;
-        myConstraints.gridx = 0;
-        myConstraints.gridy = 2;
-        
-      //Grid {1,2}
-        myConstraints.fill = GridBagConstraints.BOTH;
-        myConstraints.weightx = 0.5;
-        myConstraints.gridx = 1;
-        myConstraints.gridy = 2;
         centerPanel.add(shpnlistBTN, myConstraints);
-        
-      //Grid {2,2}
-        myConstraints.fill = GridBagConstraints.BOTH;
-        myConstraints.weightx = 0.5;
-        myConstraints.gridx = 2;
-        myConstraints.gridy = 2;
         
         //Register ActionListeners for the buttons
         menuBTN.addActionListener(this);

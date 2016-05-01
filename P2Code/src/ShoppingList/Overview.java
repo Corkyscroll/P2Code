@@ -31,6 +31,7 @@ public class Overview extends JFrame {
         secondProgressBar = new JProgressBar(pMIN, pMAX);
         thirdProgressBar  = new JProgressBar(pMIN, pMAX);
         fourthProgressBar = new JProgressBar(pMIN, pMAX);
+        
         neccesaryLabel    = new JLabel("Neccesary");
         unneccesaryLabel  = new JLabel("Unneccesary");
         plannedLabel      = new JLabel("Planned");
