@@ -16,7 +16,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ShoppingList extends JFrame implements ActionListener {
+public class ShoppingList extends JFrame {
     static int counter = 0;
     static int windowssize=350;
     static int basketcounter = 0;
@@ -37,11 +37,11 @@ public class ShoppingList extends JFrame implements ActionListener {
                 JFrame frame = new JFrame("Shopping List");
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 
-//                shoppingList.add("Mælk");
-//                shoppingList.add("Brød");
-//                shoppingList.add("Oksekød");
-//                shoppingList.add("Smør");
-//                shoppingList.add("sukker");
+                shoppingList.add("Mælk");
+                shoppingList.add("Brød");
+                shoppingList.add("Oksekød");
+                shoppingList.add("Smør");
+                shoppingList.add("Sukker");
 //
 //                shoppingqty.add("1");
 //                shoppingqty.add("1");
@@ -93,7 +93,7 @@ public class ShoppingList extends JFrame implements ActionListener {
                 JCheckBox c13 = new JCheckBox("");
                 JCheckBox c14 = new JCheckBox("");
                 
-
+                
                 JButton checkOut = new JButton(new ImageIcon(((new ImageIcon(ShoppingList.class.getResource("/resources2/cart.png"))).getImage()).getScaledInstance(30, 30, java.awt.Image.SCALE_SMOOTH)));
                 JButton del1 = new JButton(new ImageIcon(((new ImageIcon(ShoppingList.class.getResource("/resources2/trash.png"))).getImage()).getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH)));
                 del1.setBorder(null);
@@ -141,6 +141,8 @@ public class ShoppingList extends JFrame implements ActionListener {
                 JLabel c09 = new JLabel ("");
                 JLabel c010 = new JLabel ("");
                 JLabel c011 = new JLabel ("");
+
+                
                 ArrayList<JLabel> labels = new ArrayList<JLabel>();
                 labels.add(c05);
                 labels.add(c06);
@@ -1059,6 +1061,118 @@ public class ShoppingList extends JFrame implements ActionListener {
 
                 */
             
+
+                save.addActionListener(new ActionListener()
+                		{
+                        public void actionPerformed (ActionEvent e) {
+                        	new Save(shoppingList, file);	
+                        }}
+                		);
+                load.addActionListener(new ActionListener()
+                		{
+                	public void actionPerformed (ActionEvent e) {
+                        try {
+                            loadList();
+                            System.out.println(shoppingList);
+                            
+
+                            if (shoppingList.size() == 1)
+                            	c05.setText(shoppingList.get(0));
+                            else if (shoppingList.size() == 2)
+                            {
+                            	c05.setText(shoppingList.get(0));
+                            	c06.setText(shoppingList.get(1));
+                            }
+                            else if (shoppingList.size() == 3)
+                            {
+                            	c05.setText(shoppingList.get(0));
+                            	c06.setText(shoppingList.get(1));
+                            	c07.setText(shoppingList.get(2));
+                            }
+                            else if (shoppingList.size() == 4)
+                            {
+                            	c05.setText(shoppingList.get(0));
+                            	c06.setText(shoppingList.get(1));
+                            	c07.setText(shoppingList.get(2));
+                            	c08.setText(shoppingList.get(3));
+                            }
+                            else if (shoppingList.size() == 5)
+                            {
+                            	c05.setText(shoppingList.get(0));
+                            	c06.setText(shoppingList.get(1));
+                            	c07.setText(shoppingList.get(2));
+                            	c08.setText(shoppingList.get(3));
+                            	c09.setText(shoppingList.get(4));
+                            }
+                            else if (shoppingList.size() == 6)
+                            {
+                            	c05.setText(shoppingList.get(0));
+                            	c06.setText(shoppingList.get(1));
+                            	c07.setText(shoppingList.get(2));
+                            	c08.setText(shoppingList.get(3));
+                            	c09.setText(shoppingList.get(4));
+                            	c010.setText(shoppingList.get(5));
+                            }
+                            else if (shoppingList.size() == 7)
+                            {
+                            	c05.setText(shoppingList.get(0));
+                            	c06.setText(shoppingList.get(1));
+                            	c07.setText(shoppingList.get(2));
+                            	c08.setText(shoppingList.get(3));
+                            	c09.setText(shoppingList.get(4));
+                            	c010.setText(shoppingList.get(5));
+                            	c011.setText(shoppingList.get(6));
+                            }
+                            
+                            labels.clear();
+                            //c011.setText(newitem.getText());
+                            if(c05.getText()!=""){
+                                c05.setVisible(true);
+                            }
+                            if(c011.getText()!=""){
+                                c011.setVisible(true);
+                            }
+                            if(c06.getText()!=""){
+                                c06.setVisible(true);
+                            }
+                            if(c07.getText()!=""){
+                                c07.setVisible(true);
+                            }
+                            if(c08.getText()!=""){
+                                c08.setVisible(true);
+                            }
+                            if(c09.getText()!=""){
+                                c09.setVisible(true);
+                            }
+                            if(c010.getText()!=""){
+                                c010.setVisible(true);
+                            }
+                            labels.add(c05);
+                            labels.add(c06);
+                            labels.add(c07);
+                            labels.add(c08);
+                            labels.add(c09);
+                            labels.add(c010);
+                            labels.add(c011);
+                            
+                            frame.repaint();
+                            
+                            } catch (FileNotFoundException ex)
+                        {
+                            ex.printStackTrace();
+                        }
+                	}
+                		}
+                );
+                done.addActionListener(new ActionListener()
+                		{
+                	public void actionPerformed(ActionEvent e)
+                	{
+                	    frame.dispose();
+                	}
+                		}
+                		);
+                                
                 
                 layout.setHorizontalGroup(
                         layout.createSequentialGroup()
@@ -1256,34 +1370,6 @@ public class ShoppingList extends JFrame implements ActionListener {
                 frame.setVisible(true);
                 
                 //contentPane.add(c2);
-                //ActionListeners for Save and Load
-                save.addActionListener(this);
-                load.addActionListener(this);
-                done.addActionListener(this);
-    }
-    
-    @Override
-    public void actionPerformed (ActionEvent e) {
-        JButton btn = (JButton)  e.getSource();
-        System.out.println("You pressed: " + btn.getText());
-        
-        if (btn == save)
-        {
-            new Save(shoppingList, file);
-        }
-        else if (btn == load)
-        {
-           try {
-               loadList();
-               OldCode();
-               System.out.println(shoppingList);
-               } catch (FileNotFoundException ex)
-           {
-               ex.printStackTrace();
-           }
-        }
-        else if (btn == done)
-            this.dispose();
     }
     
     public void loadList() throws FileNotFoundException {
