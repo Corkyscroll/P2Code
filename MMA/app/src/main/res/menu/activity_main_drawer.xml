@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_Home"
+            android:title="Home" />
+        <item
+            android:id="@+id/menu_Xpense"
+            android:title="New Expense" />
+        <item
+            android:id="@+id/menu_shpnList"
+            android:title="Shopping List" />
+        <item
+            android:id="@+id/menu_Overview"
+            android:title="Overview" />
+        <item
+            android:id="@+id/menu_Achievements"
+            android:title="Achievements" />
+    </group>
+
+</menu>
