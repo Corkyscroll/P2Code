@@ -20,13 +20,21 @@
         android:layout_height="wrap_content"
         android:text="Name.."
         android:id="@+id/itemNameText"
+        android:layout_above="@id/categoryDropDown"
         android:layout_centerHorizontal="true"/>
-    
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryDropDown"
+        android:layout_above="@id/itemPriceText"
+        android:layout_centerHorizontal="true"/>
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Price.."
-        android:id="@+id/itemPriceText"/>
+        android:id="@+id/itemPriceText"
+        android:layout_above="@id/donebutton"
+        android:layout_centerHorizontal="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
