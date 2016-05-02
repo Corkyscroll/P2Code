@@ -9,13 +9,16 @@ import javax.swing.*;
 @SuppressWarnings("serial")
 public class NewExpense extends JFrame implements ActionListener {
     private JTextField itemNameField;
-    private JTextField itemCategoryField;
     private JTextField itemPriceField;
     private JButton doneBTN;
     private JButton cancelBTN;
     private String itemName;
     private String itemCategory;
     private Double itemPrice;
+    
+    public static String[] dropDown;
+    private static JComboBox<String> categoryChooser;
+
         
         public NewExpense() {            
             //Set up the main window frame
@@ -25,13 +28,15 @@ public class NewExpense extends JFrame implements ActionListener {
             
             //Initialize the components
             itemNameField = new JTextField("Name..");
-            itemCategoryField = new JTextField("Category..");
             itemPriceField = new JTextField("0.0");
+            categoryChooser = new JComboBox<String>(dropDown);
             doneBTN = new JButton("Done");
             cancelBTN = new JButton("Cancel");
             itemName = "Empty String";
             itemCategory = "Empty String";
             itemPrice = 0.0;
+            
+            categoryChooser.setEditable(true);
             
             //Set up the layout of the components
             GroupLayout layout = new GroupLayout(getContentPane());
@@ -46,7 +51,7 @@ public class NewExpense extends JFrame implements ActionListener {
                         .addGroup(
                                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                 .addComponent(itemNameField)
-                                .addComponent(itemCategoryField)
+                                .addComponent(categoryChooser)
                                 .addComponent(itemPriceField)
                                 .addComponent(doneBTN)
                                 )
@@ -64,7 +69,7 @@ public class NewExpense extends JFrame implements ActionListener {
                                 )
                         .addGroup(
                                 layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                .addComponent(itemCategoryField)
+                                .addComponent(categoryChooser)
                                 )
                         .addGroup(
                                 layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
@@ -92,16 +97,14 @@ public class NewExpense extends JFrame implements ActionListener {
             }
                     );
             
-            itemCategoryField.addActionListener(new ActionListener()
-            {
-                
-                @Override
-                public void actionPerformed(ActionEvent e)
-                {
-                    itemCategory = itemCategoryField.getText();
-                }
-            }
-                    );
+            categoryChooser.addActionListener(new ActionListener()
+            		{
+            	public void actionPerformed(ActionEvent e)
+            	{
+            		itemCategory = (String) categoryChooser.getSelectedItem();
+            	}
+            		}
+            		);
             
             itemPriceField.addActionListener(new ActionListener()
             {

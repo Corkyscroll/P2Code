@@ -175,7 +175,7 @@ public class Execute extends JFrame implements ActionListener {
               new Load(categoryFile, categoryList);
               new Load(itemFile, itemList);
               
-              Item.dropDown = categoryList.toArray(new String[categoryList.size()]);
+              NewExpense.dropDown = categoryList.toArray(new String[categoryList.size()]);
              
          } catch (FileNotFoundException e) {
              e.printStackTrace();

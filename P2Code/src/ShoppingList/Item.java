@@ -15,8 +15,6 @@ public class Item {
     private Double price;
     private Boolean isOnSale;
     private Double discountPrice;
-    public static String[] dropDown;
-//    private static JComboBox<String> categoryChooser = new JComboBox<String>(dropDown);;
     File itemFile = new File("items.txt");
     File categoryFile = new File("categories.txt");
     
