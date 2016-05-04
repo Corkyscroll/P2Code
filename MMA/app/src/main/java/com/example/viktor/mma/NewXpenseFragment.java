@@ -49,10 +49,10 @@ public class NewXpenseFragment extends Fragment {
                             Toast.makeText(getActivity(), "Please enter an item name and a price", Toast.LENGTH_LONG).show();
                         }
                         else {
-                            if (switchstatus.isChecked()){
-                                SaveClass.setunplanned(Double.parseDouble(itemPrice.getText().toString()));
-
-                            }
+//                            if (switchstatus.isChecked()){
+//                                SaveClass.setunplanned(Double.parseDouble(itemPrice.getText().toString()));
+//
+//                            }
                             SaveClass.setCamefromnewexpense(true);
                             SaveClass.SetShoppingListContainer(itemName.getText().toString());
                             SaveClass.CountUp();
