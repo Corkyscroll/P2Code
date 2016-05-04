@@ -12,27 +12,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Expense" />
+        android:text="New Expense"
+        android:id="@+id/textView24" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name.."
+        android:text=""
+        android:hint="Name.."
         android:id="@+id/itemNameText"
-        android:layout_above="@+id/categoryDropDown"
-        android:layout_centerHorizontal="true"/>
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/categoryDropDown"
-        android:layout_above="@+id/itemPriceText"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:layout_above="@+id/itemPriceText" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price.."
+        android:text=""
+        android:hint="Price.."
         android:id="@+id/itemPriceText"
         android:layout_above="@+id/doneButton"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:inputType="numberDecimal"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,6 +42,52 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="55dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Planned"
+        android:id="@+id/plannedSwitch"
+        android:checked="false"
+        android:layout_marginBottom="37dp"
+        android:layout_above="@+id/needSwitch"
+        android:layout_alignRight="@+id/itemPriceText"
+        android:layout_alignEnd="@+id/itemPriceText" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need To Have"
+        android:id="@+id/needSwitch"
+        android:checked="false"
+        android:layout_above="@+id/itemNameText"
+        android:layout_alignRight="@+id/plannedSwitch"
+        android:layout_alignEnd="@+id/plannedSwitch"
+        android:layout_marginBottom="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Unplanned"
+        android:id="@+id/unplannedText"
+        android:textStyle="bold"
+        android:minHeight="20dp"
+        android:layout_alignBottom="@+id/plannedSwitch"
+        android:layout_toRightOf="@+id/itemNameText"
+        android:layout_toEndOf="@+id/itemNameText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nice To Have"
+        android:id="@+id/niceText"
+        android:textStyle="bold"
+        android:minHeight="20dp"
+        android:layout_alignBottom="@+id/needSwitch"
+        android:layout_alignLeft="@+id/unplannedText"
+        android:layout_alignStart="@+id/unplannedText" />
 
 
 </RelativeLayout>

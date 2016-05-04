@@ -27,9 +27,10 @@ public class OverviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (container != null)
             container.removeAllViews();
+
         View v = inflater.inflate(R.layout.overview_fragment, container, false);
 
-        ChartSetup(v);
+        //ChartSetup(v);
 
         return v;
     }

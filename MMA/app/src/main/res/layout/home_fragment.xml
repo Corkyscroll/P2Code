@@ -35,4 +35,12 @@
         android:width="125dp"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:id="@+id/spendingText"
+        android:layout_gravity="center" />
 </FrameLayout>

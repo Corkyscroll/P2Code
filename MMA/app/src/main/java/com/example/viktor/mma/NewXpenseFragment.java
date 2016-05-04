@@ -8,13 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Viktor on 03-05-2016.
  */
 public class NewXpenseFragment extends Fragment {
     private String TAG = "NewXpenseFragment";
-    private HomeFragment homeFragment;
+    private ShoppingListFragment shpnListFragment;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (container != null)
@@ -27,19 +30,34 @@ public class NewXpenseFragment extends Fragment {
     }
 
     private void ButtonSetup(final View v) {
-        homeFragment = new HomeFragment();
+        shpnListFragment = new ShoppingListFragment();
 
         Button doneBTN = (Button) v.findViewById(R.id.doneButton);
-//        EditText itemName = (EditText) v.findViewById(R.id.itemNameText);
-//        EditText itemPrice = (EditText) v.findViewById(R.id.itemPriceText);
+        final EditText itemName = (EditText) v.findViewById(R.id.itemNameText);
+        final EditText itemPrice = (EditText) v.findViewById(R.id.itemPriceText);
+        final Switch switchstatus = (Switch) v.findViewById(R.id.plannedSwitch);
+        final Switch switchstatus2 = (Switch) v.findViewById(R.id.needSwitch);
+
+
 
         doneBTN.setClickable(true);
         doneBTN.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
-                                       public void onClick(View v) {
-                                           Log.d(TAG, "onClick: WOHO");
-                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commit();
+                    public void onClick(View v) {
+                        if (itemName.getText().toString().equals("") && itemPrice.getText().toString().equals("")) {
+                            Toast.makeText(getActivity(), "Please enter an item name and a price", Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            SaveClass.setCamefromnewexpense(true);
+                            SaveClass.SetShoppingListContainer(itemName.getText().toString());
+                            SaveClass.CountUp();
+                            SaveClass.SetMoneySpent(Double.parseDouble(itemPrice.getText().toString()));
+                            SaveClass.setNicearray(switchstatus2.isChecked());
+                            SaveClass.setPlannedarray(switchstatus.isChecked());
+                            SaveClass.setPricearray(Double.parseDouble(itemPrice.getText().toString()));
+                            getFragmentManager().beginTransaction().replace(R.id.fragment_container, shpnListFragment).commit();
+                        }
                                        }
                                    }
         );

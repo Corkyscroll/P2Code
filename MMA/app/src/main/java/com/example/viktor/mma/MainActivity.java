@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity
     private String TAG = "MainActivity";
     private HomeFragment homeFragment;
     private NewXpenseFragment newXpenseFragment;
+    private ShoppingListFragment shpnListFragment;
     private OverviewFragment overviewFragment;
     private static Context context;
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity
         //construct fragments
         homeFragment = new HomeFragment();
         newXpenseFragment = new NewXpenseFragment();
+        shpnListFragment = new ShoppingListFragment();
         overviewFragment = new OverviewFragment();
         context = this;
 
@@ -110,9 +112,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.menu_Xpense) {
             getFragmentManager().beginTransaction().replace(R.id.fragment_container, newXpenseFragment).commit();
         } else if (id == R.id.menu_shpnList) {
-            getFragmentManager().beginTransaction().replace(R.id.fragment_container, overviewFragment).commit();
+            getFragmentManager().beginTransaction().replace(R.id.fragment_container, shpnListFragment).commit();
         } else if (id == R.id.menu_Overview) {
-
+            getFragmentManager().beginTransaction().replace(R.id.fragment_container, overviewFragment).commit();
         } else if (id == R.id.menu_Achievements) {
 
         }
