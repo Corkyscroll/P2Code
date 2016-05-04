@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * Created by Viktor on 03-05-2016.
@@ -29,7 +30,9 @@ public class NewXpenseFragment extends Fragment {
         homeFragment = new HomeFragment();
 
         Button doneBTN = (Button) v.findViewById(R.id.doneButton);
-        doneBTN.setText("Done");
+//        EditText itemName = (EditText) v.findViewById(R.id.itemNameText);
+//        EditText itemPrice = (EditText) v.findViewById(R.id.itemPriceText);
+
         doneBTN.setClickable(true);
         doneBTN.setOnClickListener(
                 new View.OnClickListener() {
