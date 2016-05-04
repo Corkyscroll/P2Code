@@ -294,6 +294,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label1.setText(label2.getText());
                 label2.setText(label3.getText());
                 label3.setText(label4.getText());
@@ -400,7 +401,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                SaveClass.CountDown();
                 label2.setText(label3.getText());
                 label3.setText(label4.getText());
                 label4.setText(label5.getText());
@@ -506,6 +507,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label3.setText(label4.getText());
                 label4.setText(label5.getText());
                 label5.setText(label6.getText());
@@ -610,6 +612,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label4.setText(label5.getText());
                 label5.setText(label6.getText());
                 label6.setText(label7.getText());
@@ -713,6 +716,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label5.setText(label6.getText());
                 label6.setText(label7.getText());
                 label7.setText(label8.getText());
@@ -815,6 +819,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label6.setText(label7.getText());
                 label7.setText(label8.getText());
                 label8.setText(label9.getText());
@@ -916,6 +921,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label7.setText(label8.getText());
                 label8.setText(label9.getText());
                 label9.setText(label10.getText());
@@ -1016,6 +1022,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label8.setText(label9.getText());
                 label9.setText(label10.getText());
                 label10.setText(label11.getText());
@@ -1115,6 +1122,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label9.setText(label10.getText());
                 label10.setText(label11.getText());
                 label11.setText(label12.getText());
@@ -1213,6 +1221,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label10.setText(label11.getText());
                 label11.setText(label12.getText());
                 label12.setText(label13.getText());
@@ -1310,6 +1319,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label11.setText(label12.getText());
                 label12.setText(label13.getText());
                 label13.setText(label14.getText());
@@ -1406,6 +1416,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label12.setText(label13.getText());
                 label13.setText(label14.getText());
                 label14.setText(label15.getText());
@@ -1501,6 +1512,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label13.setText(label14.getText());
                 label14.setText(label15.getText());
                 label15.setText(label16.getText());
@@ -1595,6 +1607,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label14.setText(label15.getText());
                 label15.setText(label16.getText());
                 label16.setText(label17.getText());
@@ -1688,6 +1701,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label15.setText(label16.getText());
                 label16.setText(label17.getText());
                 label17.setText(label18.getText());
@@ -1780,6 +1794,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label16.setText(label17.getText());
                 label17.setText(label18.getText());
                 label18.setText(label19.getText());
@@ -1871,6 +1886,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label17.setText(label18.getText());
                 label18.setText(label19.getText());
                 label19.setText(label20.getText());
@@ -1961,6 +1977,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label18.setText(label19.getText());
                 label19.setText(label20.getText());
                 label20.setText("");
@@ -2050,6 +2067,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label19.setText(label20.getText());
                 label20.setText("");
 
@@ -2138,6 +2156,7 @@ public class ShoppingListFragment extends Fragment {
         imagebutton20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SaveClass.CountDown();
                 label20.setText("");
 
                 if (label1.getText().toString().equals("")){
