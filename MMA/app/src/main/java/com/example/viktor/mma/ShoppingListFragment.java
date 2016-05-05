@@ -295,6 +295,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(0));
                 label1.setText(label2.getText());
                 label2.setText(label3.getText());
                 label3.setText(label4.getText());
@@ -402,6 +403,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(1));
                 label2.setText(label3.getText());
                 label3.setText(label4.getText());
                 label4.setText(label5.getText());
@@ -508,6 +510,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(2));
                 label3.setText(label4.getText());
                 label4.setText(label5.getText());
                 label5.setText(label6.getText());
@@ -613,6 +616,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(3));
                 label4.setText(label5.getText());
                 label5.setText(label6.getText());
                 label6.setText(label7.getText());
@@ -717,6 +721,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(4));
                 label5.setText(label6.getText());
                 label6.setText(label7.getText());
                 label7.setText(label8.getText());
@@ -820,6 +825,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(5));
                 label6.setText(label7.getText());
                 label7.setText(label8.getText());
                 label8.setText(label9.getText());
@@ -922,6 +928,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(6));
                 label7.setText(label8.getText());
                 label8.setText(label9.getText());
                 label9.setText(label10.getText());
@@ -1023,6 +1030,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(7));
                 label8.setText(label9.getText());
                 label9.setText(label10.getText());
                 label10.setText(label11.getText());
@@ -1123,6 +1131,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(8));
                 label9.setText(label10.getText());
                 label10.setText(label11.getText());
                 label11.setText(label12.getText());
@@ -1222,6 +1231,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(9));
                 label10.setText(label11.getText());
                 label11.setText(label12.getText());
                 label12.setText(label13.getText());
@@ -1320,6 +1330,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(10));
                 label11.setText(label12.getText());
                 label12.setText(label13.getText());
                 label13.setText(label14.getText());
@@ -1417,6 +1428,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(11));
                 label12.setText(label13.getText());
                 label13.setText(label14.getText());
                 label14.setText(label15.getText());
@@ -1513,6 +1525,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(12));
                 label13.setText(label14.getText());
                 label14.setText(label15.getText());
                 label15.setText(label16.getText());
@@ -1608,6 +1621,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(13));
                 label14.setText(label15.getText());
                 label15.setText(label16.getText());
                 label16.setText(label17.getText());
@@ -1702,6 +1716,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(14));
                 label15.setText(label16.getText());
                 label16.setText(label17.getText());
                 label17.setText(label18.getText());
@@ -1795,6 +1810,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(15));
                 label16.setText(label17.getText());
                 label17.setText(label18.getText());
                 label18.setText(label19.getText());
@@ -1887,6 +1903,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(16));
                 label17.setText(label18.getText());
                 label18.setText(label19.getText());
                 label19.setText(label20.getText());
@@ -1978,6 +1995,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(17));
                 label18.setText(label19.getText());
                 label19.setText(label20.getText());
                 label20.setText("");
@@ -2068,6 +2086,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(18));
                 label19.setText(label20.getText());
                 label20.setText("");
 
@@ -2157,6 +2176,7 @@ public class ShoppingListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SaveClass.CountDown();
+                SaveClass.reduceMoneySpent(SaveClass.getPricearray().get(19));
                 label20.setText("");
 
                 if (label1.getText().toString().equals("")){

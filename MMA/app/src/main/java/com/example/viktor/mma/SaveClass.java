@@ -21,6 +21,7 @@ public class SaveClass {
     public static void SetMoneySpent(double newxpense) {
         moneySpent += newxpense;
     }
+    public static void reduceMoneySpent(double subtract) {moneySpent -= subtract;}
     public static double GetMoneySpent() {
         return moneySpent;
     }
